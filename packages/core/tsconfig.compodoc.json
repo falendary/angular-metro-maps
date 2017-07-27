@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "module": "es2015",
+        "target": "es5",
+        "noImplicitAny": false,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "outDir": ".tmp/esm",
+        "baseUrl": ".",
+        "sourceMap": true,
+        "removeComments": false,
+        "moduleResolution": "node",
+        "declaration": true,
+        "lib": [
+            "es2015",
+            "dom"
+        ],
+        "paths": {
+            "@agm/*": ["../packages/*"]
+        }
+    }
+}
