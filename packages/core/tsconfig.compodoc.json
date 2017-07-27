@@ -5,7 +5,7 @@
         "noImplicitAny": false,
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
-        "outDir": ".tmp/esm",
+        "outDir": ".tmp/esm/core",
         "baseUrl": ".",
         "sourceMap": true,
         "removeComments": false,

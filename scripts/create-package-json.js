@@ -19,7 +19,7 @@ packages.forEach(function(pkgName) {
   }
 
   // define the package name
-  basePkgJson.name = `@amm/${pkgName}`
+  basePkgJson.name = `@angular-metro-maps/${pkgName}`
 
   // remove scripts
   delete basePkgJson.scripts;

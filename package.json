@@ -1,5 +1,5 @@
 {
-  "name": "angular-metro-maps",
+  "name": "@angular-metro-maps/dummy",
   "version": "1.0.0",
   "description": "Angular 2+ components for metro svg maps",
   "repository": {

@@ -5,7 +5,7 @@
         "noImplicitAny": false,
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
-        "outDir": ".tmp/esm",
+        "outDir": ".tmp/esm/core",
         "baseUrl": ".",
         "sourceMap": true,
         "removeComments": false,
@@ -16,7 +16,7 @@
             "dom"
         ],
         "paths": {
-            "@amm/*": ["./packages/*"]
+            "@amm/*": ["./packages/core/*"]
         }
     },
     "angularCompilerOptions": {
@@ -28,6 +28,6 @@
         ".tmp"
     ],
     "include": [
-        "packages/**/*"
+        "packages/core"
     ]
 }
