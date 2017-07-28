@@ -68,9 +68,12 @@ amm-metro-map is currently supported with the following features. Options on how
 | [(stations)] | string[] | [] | | array of strings that sync map and your set of data
 | [mapUrl] | string | null | 'spb' - (Sankt petersburg map)| url  to svg map (Default - Moscow map)
 
+## Installation
 
-The sources for this package are in the [angular-metro-maps](https://github.com/falendary/angular-metro-maps) repository. Please file issues and pull requests against that repo.
+`Angular metro maps` gets shipped via the Node Package Manager. So make sure that you have [NodeJS](https://nodejs.org) installed.
 
+  You can install the package with the following command:
 
-
-License: See LICENSE file in this folder.
+```shell
+npm install @angular-metro-maps/core
+```
