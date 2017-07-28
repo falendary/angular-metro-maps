@@ -63,5 +63,8 @@ amm-metro-map is currently supported with the following features. Options on how
 The sources for this package are in the [angular-metro-maps](https://github.com/falendary/angular-metro-maps) repository. Please file issues and pull requests against that repo.
 
 
+### License
 
-License: See LICENSE file in this folder.
+License: See LICENSE file in this folder © [falendary](https://github.com/falendary).
+
+Metro map design © Art. Lebedev Studio
