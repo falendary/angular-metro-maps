@@ -6,16 +6,35 @@ Angular Metro Maps (AMM) Core - Angular 2+ Metro Maps components
 
 # Getting Started
 
+Import `AmmModule` from `angular-metro-maps/core`
+
 ```nashorn js
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Component } from '@angular/core';
 
 import { AmmModule } from '@angular-metro-maps/core';
 
+@NgModule({
+  imports: [
+    BrowserModule,
+    AmmModule
+  ],
+  declarations: [ AppComponent ],
+  bootstrap: [ AppComponent ]
+})
+export class AppModule {}
+```
+
+Use `amm-metro-map` component
+
+```nashorn js
+
 @Component({
   selector: 'app-root',
   template: `
-  <amm-metro-map (mapClick)="metroClick($event)" [(stations)]="metro"></amm-metro-map>
+  <amm-metro-map 
+         (mapClick)="metroClick($event)" 
+        [(stations)]="metro"></amm-metro-map>
   `
 })
 export class AppComponent {
@@ -24,6 +43,7 @@ export class AppComponent {
   
   public metroClick(mapEvent) {
 
+      // sync data with metroMap click
       this.metro.forEach(item => {
   
         if (this.metro.indexOf(item.stationName) !== -1) {
@@ -35,18 +55,7 @@ export class AppComponent {
       });
       
   }
-}
-
-@NgModule({
-  imports: [
-    BrowserModule,
-    AmmModule
-  ],
-  declarations: [ AppComponent ],
-  bootstrap: [ AppComponent ]
-})
-export class AppModule {}
-			
+}			
 ```
 
 ### Documentation
