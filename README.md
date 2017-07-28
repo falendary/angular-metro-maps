@@ -3,6 +3,8 @@ Angular Metro Maps (AMM) Core - Angular 2+ Metro Maps components
 
 @angular-metro-maps/core contains solutions for the SVG Metro Maps.
 
+###[DEMO (plunkr)](https://plnkr.co/edit/h6AVb2fcPGm8aNHtavHL?p=preview)
+
 
 # Getting Started
 
