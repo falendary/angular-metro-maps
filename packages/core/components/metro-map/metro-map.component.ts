@@ -10,7 +10,7 @@ import 'rxjs/add/operator/toPromise';
 import { OutputData } from '../../metro-map-types';
 
 @Component({
-  template: './metro-map.component.html',
+  templateUrl: './metro-map.component.html',
   selector: 'amm-metro-map'
 })
 
