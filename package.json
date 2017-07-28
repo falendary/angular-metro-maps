@@ -1,23 +1,23 @@
 {
   "name": "@angular-metro-maps/dummy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Angular 2+ components for metro svg maps",
   "repository": {
     "type": "git",
     "url": "https://github.com/falendary/angular-metro-maps.git"
   },
   "scripts": {
-    "clean": "rimraf dist && rimraf .tmp && mkdir dist && mkdir .tmp && rimraf 'packages/**/*.ngfactory.ts'",
+    "clean": "rimraf dist && rimraf .tmp && mkdir dist && mkdir .tmp",
+    "lint": "tslint -c tslint.json 'packages/**/*.ts'",
+
     "prebuild": "npm run clean",
-    "build": "npm run lint && npm run scripts && npm run packagejson",
-    "scripts": "npm run ngc:esm",
+    "build": "npm run lint && webpack",
+
     "packagejson": "node ./scripts/create-package-json.js",
     "copyassets": "node ./scripts/copy-package-assets.js",
-    "ngc:esm": "ngc -p tsconfig.json",
-    "postngc:esm": "mkdir -p dist/ && cp -R .tmp/esm/* dist/ && rimraf packages/**/*.ngfactory.ts",
-    "bundle": "npm run bundle:umd:core",
-    "bundle:umd:core": "rollup -c rollup.core.config.js",
-    "lint": "tslint -c tslint.json 'packages/**/*.ts'"
+
+    "dist": "gulp dist",
+    "build-dist": "gulp dist:build && npm run packagejson && npm run copyassets"
   },
   "bugs": {
     "url": "https://github.com/falendary/angular-metro-maps/issues"
@@ -46,22 +46,42 @@
       "@angular/http": "^4.0.0 || ^2.0.0"
     }
   },
-  "dependencies": {},
+  "dependencies": {
+    "@types/node": "^8.0.17"
+  },
   "devDependencies": {
     "@angular/common": "^4.3.1",
     "@angular/compiler": "^4.3.1",
     "@angular/compiler-cli": "^4.0.0",
     "@angular/core": "^4.3.1",
     "@angular/http": "^4.3.1",
-    "@ngtools/webpack": "^1.5.4",
+    "@angular/platform-browser": "^4.3.2",
     "@angular/tsc-wrapped": "4.0.0",
+    "@ngtools/webpack": "^1.5.4",
+    "@types/gulp": "^4.0.4",
+    "@types/merge2": "^0.3.30",
     "angular2-template-loader": "^0.6.2",
+    "awesome-typescript-loader": "^3.2.2",
     "codelyzer": "^3.1.2",
     "copy-webpack-plugin": "^4.0.1",
     "extract-text-webpack-plugin": "^3.0.0",
+    "glob": "7.1.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "4.0.0",
+    "gulp-clean": "^0.3.2",
+    "gulp-clean-css": "3.7.0",
+    "gulp-print": "^2.0.1",
+    "gulp-sass": "3.1.0",
+    "gulp-string-replace": "^0.4.0",
+    "gulp-typescript": "^3.2.1",
+    "html-webpack-plugin": "^2.29.0",
+    "merge2": "^1.1.0",
+    "raw-loader": "^0.5.1",
     "rimraf": "^2.6.1",
     "rollup": "^0.45.2",
+    "run-sequence": "^2.1.0",
     "rxjs": "^5.4.2",
+    "ts-node": "^3.2.2",
     "tslint": "^5.5.0",
     "tslint-loader": "^3.5.3",
     "typescript": "^2.4.2",

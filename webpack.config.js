@@ -42,14 +42,22 @@ module.exports = function makeWebpackConfig() {
   }
 
   config.entry = {
-    'test': './karma-test-shim.js' // our angular app
+    'app': './packages/core/index.ts'
+    // 'test': './karma-test-shim.js' // our angular app
   };
 
   /**
    * Output
    * Reference: http://webpack.github.io/docs/configuration.html#output
    */
-  config.output = {};
+  config.output = {
+
+      path: path.resolve(__dirname, 'dist/core'),
+      publicPath: '',
+      filename: '[name].[hash].js',
+      chunkFilename: '[id].[hash].chunk.js'
+
+  };
 
   /**
    * Resolve

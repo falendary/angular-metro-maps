@@ -11,6 +11,9 @@
         "removeComments": false,
         "moduleResolution": "node",
         "declaration": true,
+        "types": [
+            "node"
+        ],
         "lib": [
             "es2015",
             "dom"
