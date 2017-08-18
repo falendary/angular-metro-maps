@@ -1,7 +1,7 @@
 /**
  * Created by szhitenev on 17.07.17.
  */
-import {Component, Input, Output, EventEmitter, ElementRef, Inject, OnChanges, AfterViewInit} from '@angular/core';
+import {Component, Input, Output, EventEmitter, ElementRef, Inject, DoCheck, AfterViewInit} from '@angular/core';
 import {Http} from '@angular/http';
 
 import {Document} from '../../opaque-tokens/document';
@@ -15,7 +15,7 @@ import {OutputData} from '../../metro-map-types';
     selector: 'amm-metro-map'
 })
 
-export class MetroMapComponent implements OnChanges, AfterViewInit {
+export class MetroMapComponent implements DoCheck, AfterViewInit {
 
     @Input() mapUrl: string;
 
@@ -124,7 +124,7 @@ export class MetroMapComponent implements OnChanges, AfterViewInit {
 
     }
 
-    ngOnChanges() {
+    ngDoCheck() {
         this.syncMap();
     }
 
